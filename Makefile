@@ -121,14 +121,15 @@ endif
 #
 #================================================================
 
-INCLUDES = -I$(SRC_INCLUDES)
+INCLUDES = -I$(SRC_INCLUDES) -I$(SRC_ENGLISH)
 
 # CXX=/opt/local/bin/g++
 CXX=clang++
 CXXFLAGS = -w -W -O3 $(INCLUDES) $(DEBUG)
 
 LD=$(CXX)
-LDFLAGS = -L/opt/local/lib/gcc49
+# LDFLAGS = -L/opt/local/lib/gcc49
+LDFLAGS =
 
 #================================================================
 #

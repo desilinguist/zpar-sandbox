@@ -4,10 +4,10 @@
 
 #include "macros.h"
 #include "definitions.h"
+#include "tags.h"
 #include "pair_stream.h"
 #include "hash.h"
-#include "linguistics/word.h" 
-#include "tags.h"
+#include "linguistics/word.h"
 //#include "tagutils.h"
 #include "agenda.h"
 #include "bitarray.h"

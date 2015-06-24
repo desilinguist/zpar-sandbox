@@ -30,8 +30,8 @@
  *==============================================================*/
 
 class CStringTokenizer : public CTokenizer<std::string, 65537> {
-   public: 
-      CStringTokenizer() : CTokenizer<std::string, 65537>(1/*reserve for the other unknown */) {lookup("");} 
+   public:
+      CStringTokenizer() : CTokenizer<std::string, 65537>(1/*reserve for the other unknown */) {lookup("");}
       virtual ~CStringTokenizer() {}
 };
 
@@ -40,7 +40,7 @@ class CStringTokenizer : public CTokenizer<std::string, 65537> {
 
 /*===============================================================
  *
- * definitions about word 
+ * definitions about word
  *
  *==============================================================*/
 
@@ -82,7 +82,7 @@ public:
    bool empty() { return m_nHash==EMPTY; }
    bool unknown() { return m_nHash==UNKNOWN; }
    void clear() { m_nHash=EMPTY; }
-}; 
+};
 
 //===============================================================
 

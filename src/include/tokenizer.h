@@ -12,6 +12,7 @@
 #ifndef _TOKENIZER_H
 #define _TOKENIZER_H
 
+#include "tags.h"
 #include "hash.h"
 
 //static const unsigned TOKENIZER_SIZE = 65537 ;
@@ -33,10 +34,10 @@ class CTokenizer {
       CTokenizer(unsigned nTokenStartsFrom=0) : m_mapTokens(TOKENIZER_SIZE), m_nWaterMark(nTokenStartsFrom), m_nStartingToken(nTokenStartsFrom) {}
       virtual ~CTokenizer() {}
       unsigned long lookup(const K &key) {
-         unsigned long retval; 
-         bool bNew = m_mapTokens.findorinsert(key, m_nWaterMark, retval); 
-         if (bNew) { 
-            ++m_nWaterMark; 
+         unsigned long retval;
+         bool bNew = m_mapTokens.findorinsert(key, m_nWaterMark, retval);
+         if (bNew) {
+            ++m_nWaterMark;
             assert(m_nWaterMark!=0); // there is no overflow on the number of tokens!
             m_vecKeys.push_back(key);
          } return retval;

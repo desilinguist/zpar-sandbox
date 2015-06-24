@@ -13,6 +13,7 @@ typedef CTemporary<CConstituentLabel> CConstituent;
 #endif
 };
 
+#include "pair_stream.h"
 #include "hash.h"
 #include "bigram.h"
 #include "tuple3.h"
@@ -22,7 +23,6 @@ typedef CTemporary<CConstituentLabel> CConstituent;
 #include "linguistics/taggedword.h"
 #include "linguistics/sentence_multicon.h"
 #include "agenda.h"
-#include "pair_stream.h"
 #ifdef _CHINESE_CFG_H
 #include "charcat.h"
 #endif
@@ -33,18 +33,18 @@ typedef CTemporary<CConstituentLabel> CConstituent;
 
 #define CScoreMapType CPackedScoreMap
 
-typedef CBigram< CTaggedWord<TARGET_LANGUAGE::CTag, TARGET_LANGUAGE::TAG_SEPARATOR> > CTwoTaggedWords; 
+typedef CBigram< CTaggedWord<TARGET_LANGUAGE::CTag, TARGET_LANGUAGE::TAG_SEPARATOR> > CTwoTaggedWords;
 
 typedef TARGET_LANGUAGE::CCFGTree CSentenceParsed;
 
 #include "labeledbracket.h"
 #include "stack.h"
 
-namespace TARGET_LANGUAGE { 
+namespace TARGET_LANGUAGE {
 
 #include "linguistics/cfgset.h"
 
-namespace conparser { 
+namespace conparser {
 
 typedef double SCORE_TYPE ;
 
@@ -52,7 +52,7 @@ typedef double SCORE_TYPE ;
 typedef CTuple3<int, int, CConstituent> CBracketTuple;
 typedef CHashMap<CBracketTuple, unsigned> CBracketTupleMap;
 
-#include "stateitem.h" 
+#include "stateitem.h"
 #include "context.h"
 
 }
