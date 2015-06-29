@@ -86,7 +86,7 @@ void TARGET_LANGUAGE::CTagger::getLocalScore( CPackedScoreType<SCORE_TYPE, CTag:
    if (index>0) m_weights->m_mapTagByPrevWord.getScore(retval, prev_word, m_nScoreIndex) ;
    if (index<m_CacheSize-1) m_weights->m_mapTagByNextWord.getScore(retval, next_word, m_nScoreIndex) ;
    if (index>1) m_weights->m_mapTagBySecondPrevWord.getScore(retval, second_prev_word, m_nScoreIndex) ;
-   if (if m_CacheSize > 2 && index<m_CacheSize-2) m_weights->m_mapTagBySecondNextWord.getScore(retval, second_next_word, m_nScoreIndex) ;
+   if (m_CacheSize > 2 && index<m_CacheSize-2) m_weights->m_mapTagBySecondNextWord.getScore(retval, second_next_word, m_nScoreIndex) ;
 
    bContainHyphen = false;
    bContainNumber = false;
