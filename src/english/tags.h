@@ -18,8 +18,6 @@ namespace english {
 
 const char TAG_SEPARATOR = '/';
 
-}; // namespace english
-
 //===============================================================
 
 inline unsigned long hash(const english::CTag &tag) { return tag.code();}
@@ -39,6 +37,10 @@ inline std::ostream & operator << (std::ostream &os, const english::CTag &tag) {
 }
 
 //===============================================================
+
+}; // namespace english
+
+
 
 #include "pos/penn_morph.h"
 

@@ -12,7 +12,6 @@
 #ifndef _TOKENIZER_H
 #define _TOKENIZER_H
 
-#include "tags.h"
 #include "hash.h"
 
 //static const unsigned TOKENIZER_SIZE = 65537 ;
