@@ -127,7 +127,7 @@ CXX=/opt/local/bin/g++
 CXXFLAGS = -w -W -O3 $(INCLUDES) $(DEBUG)
 
 LD=$(CXX)
-LDFLAGS = -L/opt/local/lib/gcc49
+LDFLAGS =
 
 #================================================================
 #
