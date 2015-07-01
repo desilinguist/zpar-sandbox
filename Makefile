@@ -123,7 +123,7 @@ endif
 
 INCLUDES = -I$(SRC_INCLUDES)
 
-CXX=/opt/local/bin/g++
+CXX=g++
 CXXFLAGS = -w -W -O3 $(INCLUDES) $(DEBUG)
 
 LD=$(CXX)
